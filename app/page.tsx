@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Zap, Rocket, Brain, Globe, Shield, Code } from 'lucide-react'
+import { ArrowRight, Sparkles, Zap, Rocket, Brain, Globe, Shield, Code, Home, Castle } from 'lucide-react'
+import ScrollingText from './components/ScrollingText'
 
 const projectCategories = [
   {
@@ -30,6 +31,14 @@ const projectCategories = [
         icon: Shield,
         color: 'from-green-400 to-emerald-400',
         glow: 'green-400'
+      },
+      {
+        id: 'someone-should-make-that',
+        title: 'SomeoneShouldMakeThat.com',
+        description: 'Platform where users submit app ideas that get designed using spell methodology (weaving one-shot prompts). Users can read app summaries and vote on feasibility and impact. Builders can then develop and sell successful apps on the marketplace. Integrates with AI SaaS Betting Pool for idea validation and market prediction.',
+        icon: Code,
+        color: 'from-yellow-400 to-orange-400',
+        glow: 'yellow-400'
       }
     ]
   },
@@ -66,6 +75,27 @@ const projectCategories = [
         glow: 'indigo-400'
       }
     ]
+  },
+  {
+    name: 'Household',
+    projects: [
+      {
+        id: 'self-healing-kitchen',
+        title: 'Self Healing Kitchen',
+        description: 'Revolutionary kitchen design that reduces the number of moves needed to cook and clean. Inspired by magnetic pool table theory where pool balls are controlled by magnets under the table. Features smart design throughout with magnetic systems, automated cleaning, and intelligent organization. A long-term project requiring a larger team to develop the advanced technologies needed.',
+        icon: Home,
+        color: 'from-teal-400 to-cyan-400',
+        glow: 'teal-400'
+      },
+      {
+        id: '12-hour-castle',
+        title: '12 Hour Castle',
+        description: 'Ambitious project to build a complete castle in just 12 hours using SIP (Structural Insulated Panels) and cutting-edge technologies yet to be created. Combines rapid construction methods with innovative building techniques to achieve what seems impossible. Requires breakthrough engineering and construction methodologies.',
+        icon: Castle,
+        color: 'from-amber-400 to-yellow-400',
+        glow: 'amber-400'
+      }
+    ]
   }
 ]
 
@@ -91,6 +121,10 @@ export default function Home() {
               <div className="relative z-10 container mx-auto px-4 py-16">
           {/* Ominous overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40 pointer-events-none parallax-bg"></div>
+        
+        {/* Scrolling Text for Mobile */}
+        <ScrollingText />
+        
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: -50 }}
