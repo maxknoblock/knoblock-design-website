@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  .neon-glow {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+  
+  .parallax-bg {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .ribbon {
+    filter: blur(40px);
+    opacity: 0.15;
+  }
+  
+  .gradient-border {
+    background: linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899);
+    padding: 1px;
+  }
+  
+  .gradient-border > * {
+    @apply bg-dark-bg;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-darker-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-blue/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon-blue/70;
+}
