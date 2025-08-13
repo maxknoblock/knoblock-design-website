@@ -11,6 +11,9 @@ module.exports = {
         'neon-blue': '#00d4ff',
         'neon-purple': '#8b5cf6',
         'neon-pink': '#ec4899',
+        'neon-green': '#10b981',
+        'neon-yellow': '#f59e0b',
+        'neon-orange': '#f97316',
         'dark-red': '#7f1d1d',
         'darker-red': '#450a0a',
         'dark-bg': '#0a0a0a',
@@ -20,6 +23,7 @@ module.exports = {
       animation: {
         'glow': 'glow 2s ease-in-out infinite alternate',
         'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out infinite 2s',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {

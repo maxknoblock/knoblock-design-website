@@ -52,6 +52,51 @@
   animation: scroll-left 20s linear infinite;
 }
 
+/* Looping Title Effect - KNOBLOCKNOBLOCKNOBLOCK... */
+.looping-title-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.looping-title {
+  display: inline-block;
+  animation: loop-left 60s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes loop-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile-specific looping title */
+@media (max-width: 768px) {
+  .looping-title {
+    animation: loop-left 45s linear infinite;
+  }
+  
+  .looping-title span {
+    font-size: 4rem;
+  }
+}
+
+/* Pause animation on hover for better UX */
+.looping-title-container:hover .looping-title {
+  animation-play-state: paused;
+}
+
+/* Ensure smooth looping */
+.looping-title span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
